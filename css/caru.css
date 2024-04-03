@@ -1,0 +1,248 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27 nov. 2021, 22:45:38
+    Author     : Part
+*/
+
+header{
+    position:fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index:10000;
+    
+}
+
+#header_texto{
+    float: left;
+    width: 82%;
+    height: 150px;
+    background-image: radial-gradient(circle at 106.47% 70.55%, #ffe785 0, #ffec7c 4.55%, #fff174 9.09%, #fff56d 13.64%, #fff767 18.18%, #fffa63 22.73%, #ebfb62 27.27%, #d3fb62 31.82%, #b8fa65 36.36%, #99f969 40.91%, #74f670 45.45%, #3cf278 50%, #00ee82 54.55%, #00ea8f 59.09%, #00e69e 63.64%, #00e2af 68.18%, #00dec1 72.73%, #00dbd4 77.27%, #00d8e7 81.82%, #00d5fa 86.36%, #00d2ff 90.91%, #00d0ff 95.45%, #00cdff 100%);
+    text-align: center;
+   font-family:Brush Script MT,Garamond;
+   font-size: 30px;
+}
+
+#header_texto img{
+    width: 250px;
+    height: 150px;
+    float: left;
+}
+#header_ima_1 {
+    float:right;
+    width: 18%;
+    height: 150px;
+   
+}
+
+#header_ima_1  img{
+    width: 250px;
+    height: 150px;
+}
+
+#pie{
+    font-family:Brush Script MT,Garamond;
+    font-size: 22px;
+    text-align: center;
+}
+
+footer{
+    width: 100%;
+    background-color: yellow;
+    font-family: Brush Script MT,Garamond;
+    height: 80px;
+}
+
+.icon-cards {
+  position: relative;
+  width: 60vw;
+  height: 40vw;
+  max-width: 380px;
+  max-height: 250px;
+  margin: 0;
+  color: black;
+  perspective: 1000px;
+  transform-origin: center;
+}
+.icon-cards__content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: translateZ(-30vw) rotateY(0);
+  -webkit-animation: carousel 10s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
+          animation: carousel 10s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+.icon-cards__content.step-animation {
+  -webkit-animation: carousel 8s infinite steps(1) forwards;
+          animation: carousel 8s infinite steps(1) forwards;
+}
+.icon-cards__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 60vw;
+  height: 40vw;
+  max-width: 380px;
+  max-height: 250px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  transform-origin: center;
+}
+.icon-cards__item:nth-child(1) {
+  background-image:url(https://img.freepik.com/vector-gratis/fondo-invierno-hojas-pinceles-color-pastel_220290-42.jpg?size=626&ext=jpg);
+  transform: rotateY(0) translateZ(35vw);
+}
+.icon-cards__item:nth-child(2) {
+  background-image: url(https://image.freepik.com/vector-gratis/fondo-abstracto-hojas-petalos_23-2148544988.jpg);
+  transform: rotateY(120deg) translateZ(35vw);
+}
+.icon-cards__item:nth-child(3) {
+  background-image:url(https://thumbs.dreamstime.com/b/fondo-abstracto-moderno-con-formas-y-elementos-florales-en-tonos-neutros-vector-geométrico-para-crear-envolturas-estacionarias-184430092.jpg);
+  transform: rotateY(240deg) translateZ(35vw);
+}
+
+@-webkit-keyframes carousel {
+  0%, 17.5% {
+    transform: translateZ(-35vw) rotateY(0);
+  }
+  27.5%, 45% {
+    transform: translateZ(-35vw) rotateY(-120deg);
+  }
+  55%, 72.5% {
+    transform: translateZ(-35vw) rotateY(-240deg);
+  }
+  82.5%, 100% {
+    transform: translateZ(-35vw) rotateY(-360deg);
+  }
+}
+
+@keyframes carousel {
+  0%, 17.5% {
+    transform: translateZ(-35vw) rotateY(0);
+  }
+  27.5%, 45% {
+    transform: translateZ(-35vw) rotateY(-120deg);
+  }
+  55%, 72.5% {
+    transform: translateZ(-35vw) rotateY(-240deg);
+  }
+  82.5%, 100% {
+    transform: translateZ(-35vw) rotateY(-360deg);
+  }
+}
+
+body {
+  height: 100%;
+}
+
+body {
+  margin-top: 200px;
+  display: flex;
+  text-align: center;
+  font-family: cursive;
+  font-size: 25px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url(data:image/jpeg;base64,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);
+}
+
+
+@-webkit-keyframes jelly {
+  from {
+    transform: scale(1, 1);
+  }
+  30% {
+    transform: scale(1.25, 0.75);
+  }
+  40% {
+    transform: scale(0.75, 1.25);
+  }
+  50% {
+    transform: scale(1.15, 0.85);
+  }
+  65% {
+    transform: scale(0.95, 1.05);
+  }
+  75% {
+    transform: scale(1.05, 0.95);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes jelly {
+  from {
+    transform: scale(1, 1);
+  }
+  30% {
+    transform: scale(1.25, 0.75);
+  }
+  40% {
+    transform: scale(0.75, 1.25);
+  }
+  50% {
+    transform: scale(1.15, 0.85);
+  }
+  65% {
+    transform: scale(0.95, 1.05);
+  }
+  75% {
+    transform: scale(1.05, 0.95);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+
+@media(max-width:768px){
+    header img{
+       display: none;
+    }
+    #header_texto{
+        width: 100%;
+     }
+  
+    h1{
+        color:red;
+    }
+    body #br1{
+        display: none;
+    }
+}
+
+@media(max-width:425px){
+    header img{
+       display: none;
+    }
+    #header_texto{
+        width: 100%;
+    }
+    h1{
+        color:blue;
+    }
+    body #br1{
+        display: none;
+    }
+}
+
+@media(max-width:320){
+    header img{
+       display: none;
+    }
+    #header_texto{
+        width: 100%;
+    }
+    h1{
+        color:blueviolet;
+    }
+}
